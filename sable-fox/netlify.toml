@@ -7,9 +7,7 @@
   to = "/admin/index.html"
   status = 200
 
-# Netlify Identity redirect for CMS auth
 [[redirects]]
-  from = "/"
+  from = "/*"
   to = "/index.html"
   status = 200
-  conditions = {Role = ["admin", "editor"]}
