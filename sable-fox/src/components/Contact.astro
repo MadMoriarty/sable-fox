@@ -1,0 +1,84 @@
+---
+---
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="eyebrow">· Let's talk</div>
+        <h2>Bring us your hardest security problem.</h2>
+        <p>Most engagements start with a 30-minute call. No NDA gymnastics, no slide decks — just a working session with a principal consultant who's seen something like it before.</p>
+        <p style="margin-top:24px;font-size:15px;color:rgba(255,255,255,.45)">Typically respond within one business day.</p>
+      </div>
+
+      <div>
+        <!--
+          Netlify Forms: the `netlify` attribute on the form tag makes Netlify
+          automatically detect and handle submissions. No backend needed.
+          Submissions appear in your Netlify dashboard under Forms.
+        -->
+        <form
+          name="contact"
+          method="POST"
+          netlify
+          netlify-honeypot="bot-field"
+          action="/thank-you"
+          class="contact-form"
+        >
+          <!-- Hidden honeypot field to filter bots -->
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+          <!-- Hidden input required by Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">What are you looking for?</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option value="pen-testing">Penetration Testing</option>
+              <option value="red-team">Red Team / Adversary Emulation</option>
+              <option value="threat-hunting">Threat Hunting</option>
+              <option value="cloud-security">Cloud Security</option>
+              <option value="compliance">Compliance & Risk (SOC 2, ISO, HIPAA)</option>
+              <option value="incident-response">Incident Response</option>
+              <option value="vciso">vCISO</option>
+              <option value="foundry">Sable Fox Foundry (startup sprint)</option>
+              <option value="retainer">Den Retainer</option>
+              <option value="other">Other / Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us about the challenge</label>
+            <textarea id="message" name="message" placeholder="Brief description of what you're dealing with or what you're trying to protect…" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Send message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

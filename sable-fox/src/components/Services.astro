@@ -1,0 +1,106 @@
+---
+const capCards = [
+  {
+    bg: '#FFF3EB', fg: '#EA580C',
+    title: 'Penetration Testing',
+    body: 'Web, API, network, mobile and cloud. Manual-led, evidence-rich, no copy-paste reports.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/></svg>`,
+  },
+  {
+    bg: '#EEF2FF', fg: '#7C3AED',
+    title: 'Threat Hunting',
+    body: 'Hypothesis-driven hunts across endpoints, identity, and SaaS — surfacing what your tools miss.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`,
+  },
+  {
+    bg: '#ECFEFF', fg: '#0E7490',
+    title: 'Cloud Security',
+    body: 'AWS, Azure, GCP and Kubernetes hardening. IaC reviews, IAM least-privilege, runtime defense.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a4 4 0 000-8 6 6 0 00-11.7 1A4 4 0 006 18h11z"/></svg>`,
+  },
+  {
+    bg: '#FFF3EB', fg: '#EA580C',
+    title: 'Compliance & Risk',
+    body: 'SOC 2, ISO 27001, HIPAA, PCI. We design controls you can actually operate.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>`,
+  },
+  {
+    bg: '#FCE7F3', fg: '#BE185D',
+    title: 'Incident Response',
+    body: '24/7 retainer or one-off. Containment, forensics, recovery, lessons learned — without the drama.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>`,
+  },
+  {
+    bg: '#F0FDF4', fg: '#15803D',
+    title: 'vCISO',
+    body: 'Fractional security leadership for teams that need a strategy, not just a vendor.',
+    icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>`,
+  },
+];
+---
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>End-to-end security for every threat model. <span class="muted">From offensive red-team engagements to 24/7 detection and compliance, our consultants embed with your team to harden what matters.</span></h2>
+    </div>
+
+    <div class="bigcards">
+      <!-- Offensive Security card -->
+      <div class="bigcard">
+        <div class="bigcard-body">
+          <div class="eyebrow">Offensive Security</div>
+          <h3>Find the cracks before someone else does</h3>
+          <p>Red-team engagements, penetration testing, adversary emulation. We chain real-world TTPs to show you exactly how a breach plays out — and how to stop it.</p>
+          <div class="bigcard-corner" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="bigcard-art ribbon-orange">
+          <div style="position:absolute;left:24px;bottom:20px;right:24px;display:flex;gap:10px;flex-wrap:wrap">
+            {['Recon','Initial access','Lateral movement','Exfiltration'].map(t => (
+              <div style="padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:#0A0A14;border:1px solid rgba(255,255,255,.6)">
+                {'> '}{t}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Defensive Operations card -->
+      <div class="bigcard">
+        <div class="bigcard-body">
+          <div class="eyebrow">Defensive Operations</div>
+          <h3>A SOC that doesn't sleep, with engineers who do the hard part</h3>
+          <p>Detection engineering, threat hunting, and incident response — tuned to your stack. We replace alert fatigue with answers.</p>
+          <div class="bigcard-corner" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="bigcard-art ribbon-violet">
+          <div style="position:absolute;right:20px;bottom:20px;padding:18px 20px;border-radius:14px;background:#fff;box-shadow:0 14px 40px -16px rgba(10,10,20,.25);min-width:220px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <span style="width:8px;height:8px;border-radius:99px;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18);display:inline-block"></span>
+              <span style="font-weight:600;font-size:13px">Detection · Cluster A</span>
+            </div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6b6b78;line-height:1.7">
+              <div>events/sec · <b style="color:#0A0A14">14,802</b></div>
+              <div>p95 latency · <b style="color:#0A0A14">120ms</b></div>
+              <div>open incidents · <b style="color:#EA580C">2</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Small capability cards -->
+    <div class="capgrid">
+      {capCards.map(card => (
+        <div class="capcard">
+          <div class="ico" style={`background:${card.bg};color:${card.fg}`} set:html={card.icon} />
+          <h4>{card.title}</h4>
+          <p>{card.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

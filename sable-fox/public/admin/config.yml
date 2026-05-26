@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local dev: run `npx decap-server` and uncomment the line below
+# local_backend: true
+
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+# The CMS editor UI
+locale: en
+
+collections:
+  # ── BLOG POSTS ──────────────────────────────────────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Author", name: "author", widget: "string", default: "Sable Fox" }
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options:
+          - "Penetration Testing"
+          - "Red Team"
+          - "Threat Hunting"
+          - "Cloud Security"
+          - "Compliance"
+          - "Incident Response"
+          - "vCISO"
+          - "Strategy"
+          - "Field Notes"
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ── SITE SETTINGS ───────────────────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "general"
+        label: "General"
+        file: "src/data/settings.json"
+        fields:
+          - { label: "Site Title", name: "siteTitle", widget: "string", default: "Sable Fox — Cyber Security Consulting" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Contact Email", name: "contactEmail", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "Twitter / X URL", name: "twitter", widget: "string", required: false }

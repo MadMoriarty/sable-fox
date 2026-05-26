@@ -1,0 +1,22 @@
+---
+const stats = [
+  { n: '420+', l: 'Engagements delivered across finance, healthcare, and SaaS' },
+  { n: '24/7', l: 'Detection and response with a 12-minute median triage time' },
+  { n: '99.4%', l: 'Of critical findings remediated within the SLA window' },
+  { n: '6 yrs', l: 'Average tenure of our principal consultants' },
+];
+---
+<section class="stats" id="approach">
+  <div class="container">
+    <h2>The quiet partner behind your security posture.</h2>
+    <p class="stats-sub">We don't sell fear. We sell outcomes — the kind that show up in your audit, your board deck, and your sleep schedule.</p>
+    <div class="stats-grid">
+      {stats.map(s => (
+        <div class="stat">
+          <div class="num">{s.n}</div>
+          <div class="label">{s.l}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
